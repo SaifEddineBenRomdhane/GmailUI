@@ -55,12 +55,11 @@ namespace Gmail
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.inbox1 = new Gmail.Inbox();
-            this.starred1 = new Gmail.Starred();
-            this.snoozed1 = new Gmail.Snoozed();
-            this.important1 = new Gmail.Important();
-            this.sent1 = new Gmail.Sent();
             this.draft1 = new Gmail.Draft();
-            this.expandbleMsg1 = new Gmail.ExpandbleMsg();
+            this.sent1 = new Gmail.Sent();
+            this.important1 = new Gmail.Important();
+            this.snoozed1 = new Gmail.Snoozed();
+            this.starred1 = new Gmail.Starred();
             this.panel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).BeginInit();
@@ -564,29 +563,13 @@ namespace Gmail
             this.inbox1.Size = new System.Drawing.Size(768, 524);
             this.inbox1.TabIndex = 2;
             // 
-            // starred1
+            // draft1
             // 
-            this.starred1.BackColor = System.Drawing.Color.White;
-            this.starred1.Location = new System.Drawing.Point(182, 55);
-            this.starred1.Name = "starred1";
-            this.starred1.Size = new System.Drawing.Size(768, 524);
-            this.starred1.TabIndex = 3;
-            // 
-            // snoozed1
-            // 
-            this.snoozed1.BackColor = System.Drawing.Color.White;
-            this.snoozed1.Location = new System.Drawing.Point(182, 55);
-            this.snoozed1.Name = "snoozed1";
-            this.snoozed1.Size = new System.Drawing.Size(768, 524);
-            this.snoozed1.TabIndex = 4;
-            // 
-            // important1
-            // 
-            this.important1.BackColor = System.Drawing.Color.White;
-            this.important1.Location = new System.Drawing.Point(182, 55);
-            this.important1.Name = "important1";
-            this.important1.Size = new System.Drawing.Size(768, 524);
-            this.important1.TabIndex = 5;
+            this.draft1.BackColor = System.Drawing.Color.White;
+            this.draft1.Location = new System.Drawing.Point(182, 55);
+            this.draft1.Name = "draft1";
+            this.draft1.Size = new System.Drawing.Size(768, 524);
+            this.draft1.TabIndex = 7;
             // 
             // sent1
             // 
@@ -596,21 +579,29 @@ namespace Gmail
             this.sent1.Size = new System.Drawing.Size(768, 524);
             this.sent1.TabIndex = 6;
             // 
-            // draft1
+            // important1
             // 
-            this.draft1.BackColor = System.Drawing.Color.White;
-            this.draft1.Location = new System.Drawing.Point(182, 55);
-            this.draft1.Name = "draft1";
-            this.draft1.Size = new System.Drawing.Size(768, 524);
-            this.draft1.TabIndex = 7;
+            this.important1.BackColor = System.Drawing.Color.White;
+            this.important1.Location = new System.Drawing.Point(182, 55);
+            this.important1.Name = "important1";
+            this.important1.Size = new System.Drawing.Size(768, 524);
+            this.important1.TabIndex = 5;
             // 
-            // expandbleMsg1
+            // snoozed1
             // 
-            this.expandbleMsg1.BackColor = System.Drawing.Color.White;
-            this.expandbleMsg1.Location = new System.Drawing.Point(182, 53);
-            this.expandbleMsg1.Name = "expandbleMsg1";
-            this.expandbleMsg1.Size = new System.Drawing.Size(768, 426);
-            this.expandbleMsg1.TabIndex = 8;
+            this.snoozed1.BackColor = System.Drawing.Color.White;
+            this.snoozed1.Location = new System.Drawing.Point(182, 55);
+            this.snoozed1.Name = "snoozed1";
+            this.snoozed1.Size = new System.Drawing.Size(768, 524);
+            this.snoozed1.TabIndex = 4;
+            // 
+            // starred1
+            // 
+            this.starred1.BackColor = System.Drawing.Color.White;
+            this.starred1.Location = new System.Drawing.Point(182, 55);
+            this.starred1.Name = "starred1";
+            this.starred1.Size = new System.Drawing.Size(768, 524);
+            this.starred1.TabIndex = 3;
             // 
             // Main
             // 
@@ -618,7 +609,6 @@ namespace Gmail
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 579);
-            this.Controls.Add(this.expandbleMsg1);
             this.Controls.Add(this.inbox1);
             this.Controls.Add(this.draft1);
             this.Controls.Add(this.sent1);
@@ -676,7 +666,6 @@ namespace Gmail
         private Important important1;
         private Sent sent1;
         private Draft draft1;
-        private ExpandbleMsg expandbleMsg1;
     }
 }
 

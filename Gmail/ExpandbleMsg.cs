@@ -19,7 +19,7 @@ namespace Gmail
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            while (this.Height < 768)
+            while (this.Height < 368)
             {
                 this.Height += 5;
                 if (panel1.Height > 0)

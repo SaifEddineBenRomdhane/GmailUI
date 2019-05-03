@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AC042CD-5CAE-4E8E-8D27-DA8EE09CAE67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gmail</RootNamespace>
+    <AssemblyName>Gmail</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\.nuget\packages\Bunifu UI WinForms 1.7.0.0\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draft.Designer.cs">
+      <DependentUpon>Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpandbleMsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpandbleMsg.Designer.cs">
+      <DependentUpon>ExpandbleMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Important.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Important.Designer.cs">
+      <DependentUpon>Important.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inbox.Designer.cs">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageContext.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessageContext.Designer.cs">
+      <DependentUpon>MessageContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messsage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Messsage.Designer.cs">
+      <DependentUpon>Messsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sent.Designer.cs">
+      <DependentUpon>Sent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Snoozed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Snoozed.Designer.cs">
+      <DependentUpon>Snoozed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Starred.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Starred.Designer.cs">
+      <DependentUpon>Starred.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draft.resx">
+      <DependentUpon>Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpandbleMsg.resx">
+      <DependentUpon>ExpandbleMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Important.resx">
+      <DependentUpon>Important.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbox.resx">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageContext.resx">
+      <DependentUpon>MessageContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messsage.resx">
+      <DependentUpon>Messsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sent.resx">
+      <DependentUpon>Sent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Snoozed.resx">
+      <DependentUpon>Snoozed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Starred.resx">
+      <DependentUpon>Starred.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled_Menu_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gmail_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inbox_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inbox_52px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Vertical_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reply_Arrow_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sent_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sent_52px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star_Filled_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Circled_Menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Reset_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_50px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
